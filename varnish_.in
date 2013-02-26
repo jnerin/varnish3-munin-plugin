@@ -231,7 +231,7 @@ my %ASPECTS = (
 	'hit_rate' => {
 		'title' => 'Hit rates',
 		'order' => 'client_req cache_hit cache_miss '
-			 . 'cache_hitpass' ,
+			 . 'cache_hitpass s_pass s_pipe' ,
 		'vlabel' => '%',
 		'args' => '-u 100 --rigid',
 		'scale' => 'no',
@@ -259,6 +259,18 @@ my %ASPECTS = (
 				'min' => '0',
 				'cdef' => 'cache_hitpass,client_req,/,100,*'
 			},
+			's_pass' => {
+				'type' => 'DERIVE',
+				'draw' => 'STACK',
+				'min' => '0',
+				'cdef' => 's_pass,client_req,/,100,*'
+			},
+			's_pipe' => {
+				'type' => 'DERIVE',
+				'draw' => 'STACK',
+				'min' => '0',
+				'cdef' => 's_pipe,client_req,/,100,*'
+			},			
 		}
 	},
 	'backend_traffic' => {
