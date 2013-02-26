@@ -165,8 +165,13 @@ my %ASPECTS = (
 		'title' => 'Request rates',
 		'order' => 'cache_hit cache_hitpass cache_miss '
 			 . 'backend_conn backend_unhealthy '
-			 . 'client_req client_conn' ,
+			 . 'client_req client_conn client_drop' ,
 		'values' => {
+			'client_drop' => {
+				'type' => 'DERIVE',
+				'colour' => 'ff0000',
+				'min' => '0'
+			},		
 			'client_conn' => {
 				'type' => 'DERIVE',
 				'min' => '0',
