@@ -392,7 +392,16 @@ my %ASPECTS = (
 				'type' => 'DERIVE',
 				'min' => '0',
 				'warning' => ':1'
+			},
+			'n_wrk_lqueue' => { 
+				'type' => 'GAUGE',
+				'min' => '0'
+			},
+			'n_wrk_queued' => { 
+				'type' => 'DERIVE',
+				'min' => '0'
 			}
+			
 		}
 	},
 	'memory_usage' => {
