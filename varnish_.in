@@ -433,6 +433,14 @@ my %ASPECTS = (
 			'SMF_2' => {
 				'counter' => 'g_space',
 				'family' => 'SMF',
+			},
+			'Transient_1' => {
+				'counter' => 'g_bytes',
+				'family' => 'Transient',
+			},
+			'Transient_2' => {
+				'counter' => 'g_space',
+				'family' => 'Transient',
 			}
 		}
 	},
