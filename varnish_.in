@@ -308,7 +308,15 @@ my %ASPECTS = (
 			'backend_req' => {
 				'type' => 'DERIVE',
 				'min' => '0'
-			}
+			},
+			'backend_toolate' => {
+				'type' => 'DERIVE',
+				'min' => '0'
+			},
+			'backend_retry' => {
+				'type' => 'DERIVE',
+				'min' => '0'
+			}			
 		}
 	},
 	'objects' => {
