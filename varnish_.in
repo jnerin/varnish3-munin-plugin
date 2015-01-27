@@ -915,7 +915,7 @@ sub xml_characters {
 	if ($d eq "") {
 		return;
 	}
-	$state{'values'}{$state{'field'}} = $d;
+	$state{'values'}{$state{'field'}} = $d unless ($state{'field'} eq "type");
 }
 
 # Store the current state in %data. Issued at </stat>
